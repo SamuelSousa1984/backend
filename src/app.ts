@@ -11,8 +11,14 @@ app.use(helmet({
     contentSecurityPolicy: false
 }));
 app.use(cors({
-    origin: '*' || 'http://localhost:3000'
-}))
+    origin: '*' || 'http://localhost:3000',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
+    credentials: true
+}));
+
+app.options('*', cors())
+
 const PORT = process.env.PORT;
 const MONGO_URI = process.env.DATABASE_URL || '';
 
