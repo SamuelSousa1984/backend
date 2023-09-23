@@ -8,12 +8,7 @@ require('dotenv').config();
 const app = express();
 
 app.use(helmet());
-app.use(cors({
-    origin: 'http://localhost:3000',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    'preflightContinue': false,
-    'optionsSuccessStatus': 204
-}))
+app.use(cors())
 const PORT = process.env.PORT;
 const MONGO_URI = process.env.DATABASE_URL || '';
 
