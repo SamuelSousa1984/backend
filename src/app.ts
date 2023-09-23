@@ -1,11 +1,13 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import helmet from 'helmet';
 import cors from 'cors';
 import routes from './routes/routes';
 require('dotenv').config();
 
 const app = express();
 
+app.use(helmet());
 app.use(cors({
     origin: 'http://localhost:3000',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
