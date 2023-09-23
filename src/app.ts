@@ -1,9 +1,11 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import routes from './routes/routes';
 require('dotenv').config();
 
 const app = express();
+app.use(cors({ origin: 'https://backend-jk8e.onrender.com/' }))
 const PORT = process.env.PORT;
 const MONGO_URI = process.env.DATABASE_URL || '';
 
