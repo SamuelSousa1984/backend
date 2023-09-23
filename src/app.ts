@@ -5,7 +5,10 @@ import routes from './routes/routes';
 require('dotenv').config();
 
 const app = express();
-app.use(cors())
+app.use(cors({
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
+}))
 const PORT = process.env.PORT;
 const MONGO_URI = process.env.DATABASE_URL || '';
 
