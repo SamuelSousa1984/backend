@@ -11,10 +11,10 @@ app.use(helmet({
     contentSecurityPolicy: false
 }));
 app.use(cors({
-    origin: '168.197.245.25:3000',
+    origin: 'http://168.197.245.25:3000',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type, Authorization',
-    credentials: false
+    credentials: true
 }));
 
 app.options('*', cors())
