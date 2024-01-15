@@ -11,7 +11,7 @@ app.use(helmet({
     contentSecurityPolicy: false
 }));
 app.use(cors({
-    origin: '*',
+    origin: 'http://localhost:3000',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type, Authorization',
     credentials: false
