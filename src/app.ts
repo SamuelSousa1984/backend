@@ -11,7 +11,7 @@ app.use(helmet());
 app.use(cors());
 
 const PORT = process.env.PORT;
-const MONGO_URI = process.env.DATABASE_URL || '';
+const MONGO_URI = process.env.DATABASE_URL || 'mongodb://localhost:27017/conviteDB';
 
 app.use(express.json());
 

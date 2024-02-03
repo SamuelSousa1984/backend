@@ -1,6 +1,8 @@
 import request from "supertest";
 import app from '../src/app';
 
+// Testes desenvolvidos para a aplicação
+
 describe('Teste de integração do sistema', () => {
     it('Deve retornar status 201 ao criar convidado', async () => {
         const response = await request(app)

@@ -3,6 +3,8 @@ import {postController, getController, deleteController} from '../controllers/co
 
 const route = Router();
 
+//Rotas exploradas pela aplicação frontend
+
 route.post('/convidados', postController);
 route.get('/lista', getController);
 route.delete('/excluir', deleteController)

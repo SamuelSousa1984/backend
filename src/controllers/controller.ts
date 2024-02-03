@@ -1,6 +1,8 @@
 import {Request, Response} from 'express';
 import Model, { Convidados } from '../models/model';
 
+//Controller que cadastra convidados
+
 export const postController = async (req:Request, res:Response) => {
     const { nome, idade } = req.body;
 
@@ -16,6 +18,8 @@ export const postController = async (req:Request, res:Response) => {
         return res.status(500).json({ error })        
     }
 }
+
+//COntroller para lista de convidados
 
 export const getController = async (req:Request, res:Response) => {
     res.setHeader("Access-Control-Allow-Origin", "*")
@@ -35,6 +39,8 @@ export const getController = async (req:Request, res:Response) => {
         return res.status(500).json({ error });
     }
 }
+
+//Controller para excluir convidado em caso de desistência
 
 export const deleteController = async (req:Request, res:Response) => {
     const { nome } = req.body;
